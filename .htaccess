@@ -1,0 +1,12 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW IPALLOWID:hCFu6dqbum
+allow from 3.111.144.102
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE hCFu6dqbum:IPALLOWID
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
